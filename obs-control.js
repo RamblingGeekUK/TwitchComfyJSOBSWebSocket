@@ -14,8 +14,7 @@ obs.connect('ws://localhost:4455', 'password').then((info) => {
 // Start and stop streaming functions
 const startStreaming = async () => {
   try {
-    await obs.call("StartRecord");
-    //await obs.call("StartRecording");
+    await obs.call("StartRecord");  //StartStream
     console.log("Started streaming");
   } catch (error) {
     console.error("Failed to start streaming:", error);
@@ -24,8 +23,7 @@ const startStreaming = async () => {
 
 const stopStreaming = async () => {
   try {
-    await obs.call("StopRecord");
-    //await obs.call("StopRecording");
+    await obs.call("StopRecord");  //StopStream
     console.log("Stopped streaming");
   } catch (error) {
     console.error("Failed to stop streaming:", error);
